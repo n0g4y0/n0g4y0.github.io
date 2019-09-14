@@ -1,1 +1,704 @@
-"Hola Mundo" 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>android22019.utf8.md</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="android22019_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="android22019_files/reveal.js-3.3.0.1/css/theme/white.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="styles.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="primera-app" class="slide level2">
+<h2>Primera APP</h2>
+</section>
+<section id="cochatest" class="slide level2">
+<h2>cochaTEST</h2>
+<div class="column-left">
+<ul>
+<li>APP que hace una serie de preguntas sobre la ciudad de cochabamba.</li>
+<li>APP basica que consiste en una <strong>Activity</strong> y un <strong>Layout</strong></li>
+</ul>
+</div>
+<div class="column-right">
+<p><img data-src="images/cochatest_v1.png" alt="android" width="300" /></p>
+</div>
+</section>
+<section id="navegando-en-android-studio" class="slide level2">
+<h2>Navegando en Android Studio</h2>
+<p><img data-src="images/navegacion.png" width="1000" height="600" /></p>
+</section>
+<section id="relacion-entre-un-mainactivity.kt-y-un-mainactivity.xml" class="slide level2">
+<h2>Relacion entre un MainActivity.kt y un MainActivity.xml</h2>
+<p><img data-src="images/01-01.png" /></p>
+</section>
+<section id="activity-layout-por-defecto" class="slide level2">
+<h2>activity layout por defecto</h2>
+<div class="column-left">
+<pre><code>
+&lt;androidx.constraintlayout.widget.ConstraintLayout  
+      xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;  
+      xmlns:tools=&quot;http://schemas.android.com/tools&quot;  
+      xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;  
+      android:layout_width=&quot;match_parent&quot;  
+      android:layout_height=&quot;match_parent&quot;  
+      tools:context=&quot;.MainActivity&quot;&gt;  
+      
+    &lt;TextView  
+      android:layout_width=&quot;wrap_content&quot;  
+      android:layout_height=&quot;wrap_content&quot;  
+      android:text=&quot;Hello World!&quot;  
+      app:layout_constraintBottom_toBottomOf=&quot;parent&quot;  
+      app:layout_constraintLeft_toLeftOf=&quot;parent&quot;  
+      app:layout_constraintRight_toRightOf=&quot;parent&quot;  
+      app:layout_constraintTop_toTopOf=&quot;parent&quot;/&gt;  
+      
+    &lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;
+</code></pre>
+</div>
+<div class="column-right">
+<ul>
+<li><strong>consideraciones:</strong>
+<ul>
+<li>por defecto, se definen <strong>2 vistas (VIEWs)</strong></li>
+<li>las vistas (VIEW) <strong>componen</strong> un <em>UI</em>.</li>
+<li>todo lo que ves en una pantalla, es una VISTA<strong>(View)</strong></li>
+<li>las vistas con el que el usuario interactua, son llamados <strong>WIDGETs</strong>.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="vista-del-ui" class="slide level2">
+<h2>VISTA DEL UI</h2>
+<p><img data-src="images/01-02.png" alt="android" /></p>
+</section>
+<section><section id="haciendo-cambios" class="title-slide slide level1"><h1>Haciendo cambios</h1></section><section id="modificando-el-layout" class="slide level2">
+<h2>modificando el layout</h2>
+<p><img data-src="images/01-03.png" alt="android" height="650" /></p>
+</section><section id="definiendo-los-widgets-en-xml" class="slide level2">
+<h2>definiendo los widgets en xml:</h2>
+<pre><code>&lt;LinearLayout  
+  xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;  
+  android:layout_width=&quot;match_parent&quot;  
+  android:layout_height=&quot;match_parent&quot;  
+  android:gravity=&quot;center&quot;  
+  android:orientation=&quot;vertical&quot;&gt;  
+    &lt;TextView  
+  android:layout_width=&quot;wrap_content&quot;  
+  android:layout_height=&quot;wrap_content&quot;  
+  android:padding=&quot;24dp&quot;  
+  android:text=&quot;@string/pregunta_text&quot; /&gt;  
+    &lt;LinearLayout  
+  android:layout_width=&quot;wrap_content&quot;  
+  android:layout_height=&quot;wrap_content&quot;  
+  android:orientation=&quot;horizontal&quot;&gt;  
+        &lt;Button  
+  android:layout_width=&quot;wrap_content&quot;  
+  android:layout_height=&quot;wrap_content&quot;  
+  android:text=&quot;@string/verdad_button&quot; /&gt;  
+        &lt;Button  
+  android:layout_width=&quot;wrap_content&quot;  
+  android:layout_height=&quot;wrap_content&quot;  
+  android:text=&quot;@string/falso_button&quot; /&gt;  
+    &lt;/LinearLayout&gt;  
+  
+&lt;/LinearLayout&gt;</code></pre>
+<ul>
+<li>cada elemento (VIEW) tiene un grupo de <strong>atributos XML</strong>.</li>
+</ul>
+</section></section>
+<section><section id="jerarquia-de-las-vistas-view" class="title-slide slide level1"><h1>jerarquia de las vistas (VIEW)</h1></section><section id="cochatest-jerarquia" class="slide level2">
+<h2>cochaTEST jerarquia</h2>
+<div class="column-left">
+<ul>
+<li>El elemento <strong>RAIZ(root)</strong> es el <strong>linearLayout</strong>.</li>
+<li><strong>linearLayout</strong> hereda de <strong>ViewGroup</strong>, que hereda de <strong>View</strong>.</li>
+<li>clases hermanas de linearlayout:
+<ul>
+<li><strong>FrameLayout</strong></li>
+<li><strong>ConstraintLayout</strong></li>
+</ul></li>
+<li>Se dice que un <em>View</em> es hijo de un <strong>ViewGroup</strong>, si este ultimo lo contiene.</li>
+</ul>
+</div>
+<div class="column-right">
+<p><img data-src="images/01-04.png" alt="android" height="650" /></p>
+</div>
+</section></section>
+<section><section id="atributos-de-un-widget" class="title-slide slide level1"><h1>atributos de un widget</h1></section><section id="atributos-width-y-height" class="slide level2">
+<h2>atributos width y height</h2>
+<ul>
+<li>son atributos que son necesarios para casi todos los <strong>WIDGETs</strong>.</li>
+<li><strong>match_parent</strong>:
+<ul>
+<li>indica que el widget sera tan grande como su padre.</li>
+</ul></li>
+<li><strong>wrap_content</strong>:
+<ul>
+<li>indica que el widget sera tan grande como su contenido.</li>
+</ul></li>
+<li><strong>android:orientation</strong>:
+<ul>
+<li>indica que direccion tomaran sus elementos hijos.</li>
+</ul></li>
+<li><strong>android:text</strong>:
+<ul>
+<li>le dice al <strong>widget</strong> que mostrara en pantalla.</li>
+</ul></li>
+<li><strong>NOTA:</strong> los recursos <strong>STRING</strong> son ubicados en otro archivo, y son llamados bajo la notacion: <strong><span class="citation" data-cites="string/syntax">@string/syntax</span></strong>.</li>
+</ul>
+</section><section id="creando-recursos-string" class="slide level2">
+<h2>creando recursos “string”</h2>
+<pre><code>&lt;string name=&quot;verdad_button&quot;&gt;Verdad&lt;/string&gt;  
+&lt;string name=&quot;falso_button&quot;&gt;Falso&lt;/string&gt;  
+&lt;string name=&quot;correcto_toast&quot;&gt;Correcto&lt;/string&gt;  
+&lt;string name=&quot;incorrecto_toast&quot;&gt;Incorrecto&lt;/string&gt;</code></pre>
+<ul>
+<li>cada proyecto incluye por defecto un archivo para almacenar valores <strong>STRINGS</strong>:
+<ul>
+<li><strong>/res/values/strings.xml</strong></li>
+</ul></li>
+</ul>
+</section><section id="de-xml-a-objetos-de-tipo-vista" class="slide level2">
+<h2>de xml a objetos de tipo vista</h2>
+<ul>
+<li>aclaremos: un <strong>layout</strong> es un <strong>recurso</strong>, una pieza de la APP que <strong>no es codigo</strong>.</li>
+<li>para acceder a un <strong>recurso</strong>, hay que invocar su <strong>ID</strong> de recurso.</li>
+<li>Las APP en android estan basadas en eventos, para darles funcionalidad se les añade un escucha (LISTENER).</li>
+<li>un objeto <strong>TOAST</strong> muestra un mensaje corto en la pantalla.</li>
+</ul>
+</section><section id="declarando-objetos-y-conectandolos" class="slide level2">
+<h2>declarando objetos y conectandolos:</h2>
+<pre><code>private lateinit var botonVerdad : Button  
+private lateinit var botonFalso : Button  
+  
+  
+override fun onCreate(savedInstanceState: Bundle?) {  
+    super.onCreate(savedInstanceState)  
+    setContentView(R.layout.activity_main)  
+  
+    botonVerdad = findViewById(R.id.verdad_button)  
+    botonFalso = findViewById(R.id.falso_button)  
+  
+    botonVerdad.setOnClickListener {view : View -&gt;  
+  val muestraMensaje = Toast.makeText(this, R.string.correcto_toast, Toast.LENGTH_SHORT)  
+        muestraMensaje.show()  
+    }  
+  
+  botonFalso.setOnClickListener {view : View -&gt;  
+  
+  val muestraMensaje = Toast.makeText(this, R.string.incorrecto_toast, Toast.LENGTH_SHORT)  
+        muestraMensaje.show()  
+    }  
+}</code></pre>
+</section><section id="motrando-mensajes-con-toast" class="slide level2">
+<h2>motrando mensajes con: TOAST</h2>
+<p>makeText(context: Context, resId: Int, duration: Int).</p>
+</section><section id="desafio" class="slide level2">
+<h2>desafio</h2>
+<div class="column-left">
+<ul>
+<li><p>el mensaje de TOAST me debe mostrar en la parte superior de la pantalla.</p></li>
+<li>para completar, fijarse la documentacion <a href="https://developer.android.com/reference/kotlin/android/widget/Toast#setgravity">aqui</a></li>
+<li><p>usar la funcion <strong>setGravity</strong> de la clase <strong>TOAST</strong>.</p></li>
+</ul>
+</div>
+<div class="column-right">
+<p><img data-src="images/01_desafio.gif" alt="android" width="300" /></p>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script src="android22019_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="android22019_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Opens links in an iframe preview overlay
+        previewLinks: true,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,19 @@
+.img_ajustado{
+  float: center;
+  width: 100%;
+  text-align: center;
+}
+.column-left{
+  float: left;
+  width: 50%;
+  height: 70%;
+  text-align: left;
+}
+.column-right{
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+.prueba{
+  color: red;
+}
