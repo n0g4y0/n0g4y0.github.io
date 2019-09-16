@@ -2,6 +2,8 @@
 # evitando ciertos archivos:
 # la carpetas del sistema:
 android22019_files/
+index_files/
 images/
 android22019.Rmd
+index.Rmd
 styles.css
