@@ -1,2 +1,4 @@
 # n0g4y0.github.io
-Main Page
+la pagina para acceder es:
+
+- [pagina principal](https://n0g4y0.github.io/)
