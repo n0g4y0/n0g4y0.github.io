@@ -1,0 +1,7 @@
+### presentaciones en Rstudio ###
+# evitando ciertos archivos:
+# la carpetas del sistema:
+android22019_files/
+images/
+android22019.Rmd
+styles.css
