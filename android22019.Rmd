@@ -8,8 +8,7 @@ output:
     transition: slide
     center: true
     logo: 2019-01.png
-    
-    self_contained: false
+    self_contained: true
     reveal_options:
       slideNumber: true
       previewLinks: true
